@@ -1,3 +1,3 @@
-# pulsar-rules
+# pulsar-plugin
 
-Rules plugin for pulsar API
+This is a template repository for a pulsar plugin. Use this when creating a new plugin.
