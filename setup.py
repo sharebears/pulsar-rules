@@ -24,9 +24,9 @@ class PyTest(TestCommand):
 
 
 setup(
-    name='pulsar-plugin_name',
+    name='pulsar-rules',
     version='0.0.1',
-    description='plugin_name plugin for the pulsar project',
+    description='Rules plugin for the pulsar project',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     license='MIT',
@@ -34,7 +34,7 @@ setup(
     author_email='sharebears@tutanota.de',
     url='https://github.com/sharebears',
     packages=[
-        'plugin_name',
+        'rules',
     ],
     python_requires='==3.7',
     tests_require=[
