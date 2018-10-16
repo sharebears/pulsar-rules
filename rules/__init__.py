@@ -14,8 +14,14 @@ PERMISSIONS = [
 ]
 
 SECTIONS = [
-    'golden',
+    {
+        'id': 'golden',
+        'name': 'Golden Rules',
+        'description': 'These are the big rules. Break them and suffer.',
+    },
 ]
+
+SECTION_NAMES = {d['id'] for d in SECTIONS}
 
 
 def init_app(app):
@@ -25,7 +31,7 @@ def init_app(app):
 
 
 def get_rules(section: str) -> dict:
-    if section not in SECTIONS:
+    if section not in SECTION_NAMES:
         raise APIException(f'{section} is not a valid section of the rules.')
     rules = cache.get(f'rules_{section}')
     if not rules:

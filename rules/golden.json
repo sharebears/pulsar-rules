@@ -1,22 +1,57 @@
 {
-    "1": {
-        "1": {
-            "main": "Do not create more than one account.",
-            "more": "Users are allowed one account per lifetime."
+  "id": "golden",
+  "name": "Golden Rules",
+  "description": "These are the big rules. Break them and suffer.",
+  "rules": [
+    {
+      "number": "1",
+      "summary": "Accounts",
+      "extra": null,
+      "rules": [
+        {
+          "number": "1.1",
+          "summary": "Do not create more than one account.",
+          "extra": "Users are allowed one account per lifetime. Do not create additional accounts under any circumstance. If your account is disabled, contact staff in #disabled on IRC.",
+          "rules": null
         },
-        "2": {
-            "main": "Do not trade, sell, give away, or offer accounts.",
-            "more": "If you no longer wish to use your account, send a Staff PM"
+        {
+          "number": "1.2",
+          "summary": "Do not trade, sell, give away, or offer accounts.",
+          "extra": "If you no longer wish to use your account, send a Staff PM and request that your account be disabled. Note, we do not delete accounts.",
+          "rules": null
         },
-        "3": {
-            "main": "Do not share accounts.",
-            "more": "Accounts are for personal use only."
+        {
+          "number": "1.3",
+          "summary": "Do not share accounts.",
+          "extra": "Accounts are for personal use only. Granting access to your account in any way (e.g., shared login details, external programs) is prohibited. Invite friends and family if they wish to use the site.",
+          "rules": null
         }
+      ]
     },
-    "2": {
-        "1": {
-            "main": "Do not invite bad users.",
-            "more": "You are responsible for your invitees."
+    {
+      "number": "2",
+      "summary": "Invites",
+      "extra": null,
+      "rules": [
+        {
+          "number": "2.1",
+          "summary": "Do not invite bad users.",
+          "extra": "You are responsible for your invitees. You will not be punished if your invitees fail to maintain required share ratios, but invitees who break golden rules or invite rules will place your invite privileges and account at risk.",
+          "rules": null
+        },
+        {
+          "number": "2.2",
+          "summary": "Do not trade, sell, publicly give away, or publicly offer invites.",
+          "extra": "Only invite people you know and trust.",
+          "rules": null
+        },
+        {
+          "number": "2.3",
+          "summary": "Do not request invites or accounts.",
+          "extra": "Requesting invites to—or from other trackers is prohibited.",
+          "rules": null
         }
+      ]
     }
+  ]
 }
