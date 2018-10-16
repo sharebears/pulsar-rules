@@ -4,14 +4,15 @@ import os
 import flask
 
 from core import APIException, cache
-from core.permissions.models import UserPermission
 from core.utils import require_permission
+from core.mixins import Permission
 
 bp = flask.Blueprint('rules', __name__)
 
-PERMISSIONS = [
-    'view_rules',
-]
+
+class RulePermissions(Permission):
+    VIEW = 'rules_view'
+
 
 SECTIONS = [
     {
@@ -27,8 +28,6 @@ SECTION_NAMES = {d['id'] for d in SECTIONS}
 def init_app(app):
     app.register_blueprint(bp)
 
-    UserPermission.all_permissions += PERMISSIONS
-
 
 def get_rules(section: str) -> dict:
     if section not in SECTION_NAMES:
@@ -43,10 +42,10 @@ def get_rules(section: str) -> dict:
 
 
 @bp.route('/rules', methods=['GET'])
-@require_permission('view_rules')
-def view_rules_overview() -> flask.Response:
+@require_permission(RulePermissions.VIEW)
+def rules_view_overview() -> flask.Response:
     """
-    View a list of rule sections. Requires the ``view_rules`` permission.
+    View a list of rule sections. Requires the ``rules_view`` permission.
 
     .. :quickref: Rules; Get rule sections.
 
@@ -83,10 +82,10 @@ def view_rules_overview() -> flask.Response:
 
 
 @bp.route('/rules/<section>', methods=['GET'])
-@require_permission('view_rules')
-def view_rules(section: str) -> flask.Response:
+@require_permission(RulePermissions.VIEW)
+def rules_view(section: str) -> flask.Response:
     """
-    View a section of rules. Requires the ``view_rules`` permission.
+    View a section of rules. Requires the ``rules_view`` permission.
 
     .. :quickref: Rules; Get a rule section.
 
