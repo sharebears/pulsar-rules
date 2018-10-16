@@ -4,6 +4,7 @@ import os
 import flask
 
 from core import APIException, cache
+from core.permissions.models import UserPermission
 from core.utils import require_permission
 
 bp = flask.Blueprint('rules', __name__)
@@ -19,6 +20,8 @@ SECTIONS = [
 
 def init_app(app):
     app.register_blueprint(bp)
+
+    UserPermission.all_permissions += PERMISSIONS
 
 
 def get_rules(section: str) -> dict:
