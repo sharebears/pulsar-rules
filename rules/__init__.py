@@ -5,12 +5,12 @@ import flask
 
 from core import APIException, cache
 from core.utils import require_permission
-from core.mixins import Permission
+from core.permissions import PermissionsEnum
 
 bp = flask.Blueprint('rules', __name__)
 
 
-class RulePermissions(Permission):
+class RulePermissions(PermissionsEnum):
     VIEW = 'rules_view'
 
 
