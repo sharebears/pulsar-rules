@@ -4,8 +4,8 @@ import os
 import flask
 
 from core import APIException, cache
-from core.utils import require_permission
 from core.permissions import PermissionsEnum
+from core.utils import require_permission
 
 bp = flask.Blueprint('rules', __name__)
 
