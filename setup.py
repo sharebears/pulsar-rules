@@ -36,7 +36,7 @@ setup(
     packages=[
         'rules',
     ],
-    python_requires='==3.7',
+    python_requires='>=3.7, <3.8',
     tests_require=[
         'pytest',
         'mock',
