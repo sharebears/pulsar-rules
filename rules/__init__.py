@@ -19,7 +19,7 @@ SECTIONS = [
         'id': 'golden',
         'name': 'Golden Rules',
         'description': 'These are the big rules. Break them and suffer.',
-    },
+    }
 ]
 
 SECTION_NAMES = {d['id'] for d in SECTIONS}

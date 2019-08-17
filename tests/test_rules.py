@@ -21,7 +21,9 @@ def test_get_rules(app, authed_client):
 def test_get_rules_nonexistent(app, authed_client):
     add_permissions(app, RulePermissions.VIEW)
     response = authed_client.get('/rules/nonexistent')
-    check_json_response(response, 'nonexistent is not a valid section of the rules.')
+    check_json_response(
+        response, 'nonexistent is not a valid section of the rules.'
+    )
 
 
 def test_get_rules_cache(app, authed_client, monkeypatch):
